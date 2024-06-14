@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# Bristol Crime Heat Map
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React application that displays a heat map of crimes in Bristol using data from the UK Police API. The application allows users to filter crimes by category and view detailed information about individual crimes by zooming in on the map.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+-   Displays a heat map of crimes in Bristol.
+-   Allows filtering of crimes by category.
+-   Switches to individual crime markers with popups at maximum zoom level.
+-   Users can select a specific date to view crimes for that month.
+-   "Select All" and "Deselect All" buttons for quick category selection.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-   React
+-   react-leaflet
+-   leaflet.heat
+-   axios
+-   Tailwind CSS
+-   Firebase (for hosting)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+Make sure you have Node.js and npm installed on your machine.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation and Usage
 
-### `npm run build`
+1. Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    git clone https://github.com/your-username/bristol-crime-heat-map.git
+    cd bristol-crime-heat-map
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install the dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
 
-### `npm run eject`
+3. Running the App Locally
+   To run the app locally in development mode, use:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This will start the development server and open the app in your default browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Usage
+Open the application in your browser.
+Use the date selector to choose a month and year.
+Use the category filters to select which types of crimes to display.
+Zoom in on the map to switch from a heat map to individual crime markers with detailed popups.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Folder Structure
 
-## Learn More
+```java
+my-app/
+├── public/
+├── src/
+│   ├── api/
+│   │   └── policeData.js
+│   ├── components/
+│   │   ├── CrimeFilter.js
+│   │   ├── DateSelector.js
+│   │   ├── HeatmapLayer.js
+│   │   └── Map.js
+│   ├── App.js
+│   ├── index.js
+│   └── App.css
+├── .firebaserc
+├── firebase.json
+├── package.json
+├── README.md
+└── .gitignore
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
-### Code Splitting
+### License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License. See the LICENSE file for details.

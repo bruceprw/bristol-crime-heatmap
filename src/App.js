@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import CrimeMap from './components/Map';
+import DateSelector from './components/DateSelector';
+import 'leaflet/dist/leaflet.css';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [date, setDate] = useState('2023-01-01');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center">
+      <header className="bg-blue-600 text-white w-full p-4 text-center shadow-md">
+        <h1 className="text-2xl font-bold">Bristol Crime Heat Map</h1>
       </header>
+      <main className="flex flex-col items-center w-full p-4">
+        <DateSelector onDateChange={setDate} />
+        <div className="w-full h-96 mt-4">
+          <CrimeMap date={date} />
+        </div>
+      </main>
     </div>
   );
-}
+};
 
 export default App;
