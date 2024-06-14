@@ -1,3 +1,4 @@
+// src/components/CrimeFilter.js
 import React from 'react';
 
 const categories = [
@@ -23,8 +24,7 @@ const CrimeFilter = ({ selectedCategories, onCategoryChange, onSelectAll, onDese
     };
 
     return (
-        <div className="flex flex-col items-center mb-4">
-            <label className="mb-2 text-lg font-medium text-gray-700">Select Crime Categories:</label>
+        <div className="filter-container">
             <div className="flex space-x-2 mb-2">
                 <button
                     onClick={onSelectAll}
@@ -39,17 +39,19 @@ const CrimeFilter = ({ selectedCategories, onCategoryChange, onSelectAll, onDese
                     Deselect All
                 </button>
             </div>
-            {categories.map((category) => (
-                <label key={category} className="flex items-center mb-1">
-                    <input
-                        type="checkbox"
-                        checked={selectedCategories.includes(category)}
-                        onChange={() => handleChange(category)}
-                        className="mr-2"
-                    />
-                    {category.replace('-', ' ')}
-                </label>
-            ))}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {categories.map((category) => (
+                    <label key={category} className="flex items-center mb-1">
+                        <input
+                            type="checkbox"
+                            checked={selectedCategories.includes(category)}
+                            onChange={() => handleChange(category)}
+                            className="mr-2"
+                        />
+                        {category.replace('-', ' ')}
+                    </label>
+                ))}
+            </div>
         </div>
     );
 };

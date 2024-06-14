@@ -1,18 +1,21 @@
-/* src/App.css */
-.App {
-    text-align: center;
+.filter-container {
+    width: 100%;
+    background-color: #f7fafc;
+    padding: 16px;
+    margin-top: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-form {
-    display: inline-block;
-    text-align: left;
-    margin-top: 20px;
+.filter-container .grid {
+    display: grid;
+    gap: 16px;
 }
 
-form div {
-    margin-bottom: 10px;
+.filter-container .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
 }
 
-button {
-    margin-top: 20px;
+.filter-container .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
 }
