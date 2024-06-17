@@ -123,7 +123,10 @@ const CrimeMap = ({ date }) => {
                 onSelectAll={handleSelectAll}
                 onDeselectAll={handleDeselectAll}
             />
+            <footer>Created by Bruce Williams 2024</footer>
+
         </div>
+
     );
 };
 

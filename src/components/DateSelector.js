@@ -13,6 +13,7 @@ const DateSelector = ({ defaultDate, onDateChange }) => {
                 className="px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 onChange={e => onDateChange(e.target.value)}
                 min="2022-01"
+                max="2024-04"
                 value={defaultDate} // Set the default date
             />
         </div>
