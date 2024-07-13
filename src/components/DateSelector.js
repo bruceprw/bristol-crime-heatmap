@@ -1,4 +1,3 @@
-// src/components/DateSelector.js
 import React from 'react';
 
 const DateSelector = ({ defaultDate, onDateChange }) => {
